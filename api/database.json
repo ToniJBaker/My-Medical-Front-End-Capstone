@@ -1,0 +1,64 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fullName": "Cruz Rohan",
+            "email": "rohan@mail.com",
+            "address": "89208 Murray Circle",
+            "birthDate": "Mon Jul 18 2006 19:30:27 GMT-0400 (Eastern Daylight Time)",
+            "male": true,
+            "female": false,
+            "phoneNumber": "530.508.0916 x15155"
+        },
+        {
+            "id": 2,
+            "fullName": "Oscar Adams",
+            "email": "adams@mail.com",
+            "address": "3879 Sammy Lodge",
+            "birthDate": "Sat Jun 18 1985 04:35:54 GMT-0400 (Eastern Daylight Time)",
+            "male": true,
+            "female": false,
+            "phoneNumber": "1-704-647-9213 x5813"
+        },
+        {
+            "id": 3,
+            "fullName": "Mary Brakus",
+            "email": "brakus@mail.com",
+            "address": "16835 Monahan Shoal",
+            "birthDate": "Fri Apr 08 1962 22:30:03 GMT-0400 (Eastern Daylight Time)",
+            "male": false,
+            "female": true,
+            "phoneNumber": "621.409.4777 x9679"
+        },
+        {
+            "id": 4,
+            "fullName": "Destiny Marks",
+            "email": "marks@mail.com",
+            "address": "0011 Hilll View",
+            "birthDate": "Mon Mar 07 1990 01:00:25 GMT-0500 (Eastern Standard Time)",
+            "male": false,
+            "female": true,
+            "phoneNumber": "794-201-2439 x719"
+        }
+    ],
+    "physicians":[
+        {
+
+        }
+    ],
+    "prescriptions": [
+        {
+
+        }
+    ],
+    "appointments": [
+        {
+
+        }
+    ],
+    "userMedicalHistory": [
+        {
+
+        }
+    ]
+}
