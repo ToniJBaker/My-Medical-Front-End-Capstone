@@ -1,0 +1,22 @@
+/* Button */
+#root .btn-primary{
+    background-color:#98b6b8;
+    color: #000000
+   }
+   /* Navbar  link */
+#staticBackdrop .navbar__item .navbar__link{
+    color:#000000;
+    font-size:22px;
+    text-decoration:none;
+    background-color:transparent;
+   }
+   /* Offcanvas body */
+#staticBackdrop .offcanvas-body{
+    transform:translatex(0px) translatey(0px);
+    background-color:#98b6b8;
+   }
+   /* Offcanvas header */
+#staticBackdrop .offcanvas-header{
+    background-color:#3c6e71;
+    color:#000000;
+   }

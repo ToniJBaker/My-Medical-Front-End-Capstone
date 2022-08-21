@@ -43,17 +43,148 @@
     ],
     "physicians":[
         {
-
+            "id": 1,
+            "userId": 3,
+            "name": "Kadin Thompson",
+            "phone": "691-565-1108 x712",
+            "address": "72253 Smitham Neck",
+            "specialty": "Orthopedics"
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "name": "Janessa Conn",
+            "phone": "769.416.8207",
+            "address": "33274 Reinger Field",
+            "specialty": "Primary Care"
+        },
+        {
+            "id": 3,
+            "userId": 1,
+            "name": "Camron Rau",
+            "phone": "606.957.6316 x06145",
+            "address": "9188 Roberto Alley",
+            "specialty": "Urology"
+        },
+        {
+            "id": 4,
+            "userId": 3,
+            "name": "Hayden Emmerich",
+            "phone": "565.569.5586",
+            "address": "8069 Bradtke Squares",
+            "specialty": "Endocrinology"
+        },
+        {
+            "id": 5,
+            "userId": 4,
+            "name": "Esperanza Maggio",
+            "phone": "565.569.5586",
+            "address": "8069 Bradtke Squares",
+            "specialty": "Primary Care"
+        },
+        {
+            "id": 6,
+            "userId": 3,
+            "name": "Deshaun Feeney",
+            "phone": "565.569.5586",
+            "address": "8069 Bradtke Squares",
+            "specialty": "Primary Care"
+        },
+        {
+            "id": 7,
+            "userId": 2,
+            "name": "Sam Kunde",
+            "phone": "565.569.5586",
+            "address": "8069 Bradtke Squares",
+            "specialty": "Optometry"
         }
     ],
     "prescriptions": [
         {
-
+            "id": 1,
+            "userId": 3,
+            "physicianId": 6,
+            "name": "Albuterol Sulfate 90 mcg per actuation",
+            "dosage": "1 inhalation, morning"
+        },
+        {
+            "id": 2,
+            "userId": 3,
+            "physicianId": 4,
+            "name": "Carvedilol 25mg",
+            "dosage":"1 tablet- twice a day"
+        },
+        {
+            "id": 3,
+            "userId": 3,
+            "physicianId": 1,
+            "name": "Ibuprophen 400mg",
+            "dosage": "1 tablet every 4-6 hours, no more than 3 in 24 hours"
+        },
+        {
+            "id": 4,
+            "userId": 2,
+            "physicianId": 2,
+            "name": "Prednisone 20mg",
+            "dosage": "2 tablets- once a day"
+        },
+        {
+            "id": 5,
+            "userId": 2,
+            "physicianId": 7,
+            "name": "5% Sterile Ophthalmic Ointment",
+            "dosage": "Apply every 3-4 hours"
+        },
+        {
+            "id": 6,
+            "userId": 1,
+            "physicianId": 3,
+            "name": "Oxybutynin 15mg",
+            "dosage": "1 tablet- once a day"
+        },
+        {
+            "id": 7,
+            "userId": 4,
+            "physicianId": 5,
+            "name": "Metphormin 1000mg",
+            "dosage": "1 tablet- once a day"
         }
     ],
     "appointments": [
         {
-
+            "id": 1,
+            "userId": 3,
+            "physicianId": 1,
+            "time": "3:00pm",
+            "date": "Mon, 15 Jan 2023"
+        },
+        {
+            "id": 2,
+            "userId": 3,
+            "physicianId": 6,
+            "time": "3:00pm",
+            "date": "Mon, 6 Feb 2023"
+        },
+        {
+            "id": 3,
+            "userId": 3,
+            "physicianId": 4,
+            "time": "3:00pm",
+            "date": "Fri, 17 Feb 2023"
+        },
+        {
+            "id": 4,
+            "userId": 2,
+            "physicianId": 7,
+            "time": "3:00pm",
+            "date": "Wed, 8 Feb 2023"
+        },
+        {
+            "id": 5,
+            "userId": 2,
+            "physicianId": 2,
+            "time": "3:00pm",
+            "date": "Fri, 10 March 2023"
         }
     ],
     "userMedicalHistory": [

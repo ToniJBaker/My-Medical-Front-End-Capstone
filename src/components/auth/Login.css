@@ -1,0 +1,19 @@
+#root .link--register a{
+    color:#284b63;
+   }
+
+   /* Button */
+   .form--login fieldset button{
+    background-color:#bec9ca;
+    color:#000000;
+   }
+   
+   /* Fieldset */
+   #root section fieldset{
+    background-color:#bec9ca;
+   }
+   /* Input */
+.form--login fieldset input[type=email]{
+    background-color:#bec9ca;
+    border-color:#000000;
+   }
