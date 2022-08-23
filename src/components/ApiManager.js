@@ -4,6 +4,12 @@ export const fetchUsers = (resource = "", options = {}) => {
     .then(response => response.json())
 }
 
+export const fetchPhysicians = (resource = "", options = {}) => {
+  return fetch(`http://localhost:8088/physicians${resource}`, options)
+  .then(response => response.json())
+}
+
+
 
 
 export const postOption = (bodyContent) => {

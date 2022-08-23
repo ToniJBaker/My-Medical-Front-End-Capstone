@@ -38,7 +38,7 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
     const handleRegister = (e) => {
         e.preventDefault()
         return ( 
-            fetchUsers()//fetch call
+            fetchUsers(user)//fetch call
             .then(response => {
                 if (response.length > 0) {
                     // Duplicate email. No good.
@@ -57,8 +57,8 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
         setUser(copy)
     }
 
-    return (
-        <main style={{ textAlign: "center" }}>
+    return (<>
+        {/* <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
                 <h2 className="h3 mb-3 font-weight-normal">Please Register for My Medical Storage</h2>
                 <fieldset>
@@ -96,6 +96,54 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
                     <button type="submit"> Register </button>
                 </fieldset>
             </form>
-        </main>
-    )
+        </main> */}
+
+
+
+
+<form class="row g-3" onSubmit={handleRegister}>
+    <h2 className="h3 mb-3 font-weight-normal">Please Register for My Medical Storage</h2>
+        
+        <div class="col-md-6">
+            <label htmlFor="fullName" className="form-label">Full Name</label>
+            <input onChange={updateCustomer} type="text" class="form-control" id="fullName"/>
+        </div>
+        <div class="col-md-6">
+            <label htmlFor="email" class="form-label">Email</label>
+            <input onChange={updateCustomer} type="email" className="form-control" id="email"/>
+        </div>
+        <div class="col-12">
+            <label htmlFor="address" class="form-label">Address</label>
+            <input onChange={updateCustomer} type="text" className="form-control" id="address" placeholder="ex. 1234 Main St"/>
+        </div>
+        {/* <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity" placeholder=""/>
+        </div>
+        <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip"/>
+        </div> */}
+        <div class="col-md-6">
+            <label htmlFor="birthDate" className="form-label">Birth Date</label>
+            <input onChange={updateCustomer} type="text" className="form-control" id="birthDate"/>
+        </div>
+        <div class="col-md-6">
+            <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
+            <input onChange={updateCustomer} type="text" className="form-control" id="phoneNumber" placeholder="ex. 801-111-2222"/>
+        </div>
+        <div className="col-12">
+        </div>
+        <div className="col-12">
+            <button type="submit" className="btn btn-primary">Register</button>
+        </div>
+    </form>
+</> )
 }
