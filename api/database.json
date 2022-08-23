@@ -59,14 +59,6 @@
       "specialty": "Primary Care"
     },
     {
-      "id": 3,
-      "userId": 1,
-      "name": "Camron Rau",
-      "phone": "606.957.6316 x06145",
-      "address": "9188 Roberto Alley",
-      "specialty": "Urology"
-    },
-    {
       "id": 4,
       "userId": 3,
       "name": "Hayden Emmerich",
@@ -136,13 +128,6 @@
       "dosage": "Apply every 3-4 hours"
     },
     {
-      "id": 6,
-      "userId": 1,
-      "physicianId": 3,
-      "name": "Oxybutynin 15mg",
-      "dosage": "1 tablet- once a day"
-    },
-    {
       "id": 7,
       "userId": 4,
       "physicianId": 5,
@@ -169,8 +154,8 @@
       "id": 3,
       "userId": 3,
       "physicianId": 4,
-      "time": "11:00am",
-      "date": "Fri, 17 Feb 2023"
+      "time": "08:00",
+      "date": "01/28/2023"
     },
     {
       "id": 4,

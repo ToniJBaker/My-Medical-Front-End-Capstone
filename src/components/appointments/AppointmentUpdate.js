@@ -7,10 +7,7 @@ import "./Appointments.css"
 export const AppointmentUpdate = () => {
     const {appointmentId} = useParams()
     const navigate = useNavigate()
-    
-    const localMedicalUser = localStorage.getItem("myMedical_user")
-    const medicalUserObject = JSON.parse(localMedicalUser)
-    
+           
     const [appointment, setAppointment] = useState({
         userId: 0, 
         physicianId:0,
@@ -20,7 +17,7 @@ export const AppointmentUpdate = () => {
     
     useEffect(
         ()=>{
-          fetchAppointments(`/${appointmentId}?_expand=physician`) //fetch call, appointment by id   ex.http://localhost:8088/appointments/1?_expand=physician
+          fetchAppointments(`/${appointmentId}`) //fetch call, appointment by id & expand to physicianId ex.http://localhost:8088/appointments/1?_expand=physician `/${appointmentId}`?_expand=physician
           .then((appointmentFromAPI)=>{
                 setAppointment(appointmentFromAPI)
           })
@@ -28,21 +25,13 @@ export const AppointmentUpdate = () => {
         []
     )
     
-    const handleSaveUpdatedAppointment = (event) => { //function to save updated appointment time and date
+    const handleUpdatedAppointment = (event) => { //function to save updated appointment time and date
         event.preventDefault()
-        const appointmentUpdateInAPI = {
-            userId: medicalUserObject.id,
-            physicianId: medicalUserObject.physicianId,
-            time: appointment.time,
-            date: appointment.date,
-             
-        }
-        return (
-            fetchPhysicians("", putOption(appointmentUpdateInAPI)) //fetch call to POST new physician to database.json
+            fetchAppointments(`/${appointmentId}`, putOption(appointment)) //fetch call to POST new physician to database.json
             .then(()=>{
                 navigate("/physicians")
             })
-        )
+        
     }
     
     const convertDateFormat = (dateString, outFormat) => {
@@ -61,16 +50,11 @@ export const AppointmentUpdate = () => {
         return dateString
         
     }
-    const saveAppointment = (evt) => {
-        const copy = {...appointment}
-        copy[evt.target.id] = evt.target.value
-        setAppointment(copy)
-    }
-
+    
     return (
     <>
-        <form onSubmit={handleSaveUpdatedAppointment}>
-            <div className="row mb-3" >
+        <form onSubmit={handleUpdatedAppointment}>
+            {/* <div className="row mb-3" >
                 <label htmlFor="date" className="col-sm-2 col-form-label">Date</label>
                 <div className="col-sm-10">
                 <input type="text" className="form-control" value={appointment.date} id="date"/>
@@ -82,7 +66,7 @@ export const AppointmentUpdate = () => {
                 <div className="col-sm-10">
                 <input type="text" className="form-control" value={appointment.time} id="time"/>
                 </div>
-            </div>
+            </div> */}
              
             <div className="form-group">
                 <label htmlFor="date">Choose Date:</label>
@@ -102,7 +86,9 @@ export const AppointmentUpdate = () => {
                     value={appointment.time}
                     onChange={
                         (evt) => {
-                            saveAppointment(evt)
+                            const copy = {...appointment}
+                            copy[evt.target.id] = evt.target.value
+                            setAppointment(copy)
                         }
                     } id="time"/>
             </div>
