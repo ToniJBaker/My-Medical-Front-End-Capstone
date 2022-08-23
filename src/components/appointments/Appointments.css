@@ -1,0 +1,7 @@
+/* Input */
+#root form input[type=date]{
+    position:relative;
+    left:78px;
+    max-width:325px;
+    min-width:300px;
+   }

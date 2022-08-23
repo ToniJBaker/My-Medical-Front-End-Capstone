@@ -1,0 +1,30 @@
+/* Image */
+#root .carousel-item img{
+    display:inline-block !important;
+    min-height:406px;
+    position:relative;
+    left:33px;
+    bottom:21px;
+    max-width:591px;
+   }
+   
+   /* Image */
+   #root #carouselExampleDark .carousel-inner .carousel-item img{
+    transform:translatex(289px) translatey(22px) !important;
+   }
+   
+   
+   /* Heading */
+#root .carousel-item h5{
+    position:relative;
+    top:-200px;
+    font-size:31px;
+    font-weight: bold;
+   }
+   /* Paragraph */
+#root .carousel-item p{
+    position:relative;
+    top:-197px;
+    font-size: 19px
+   }
+   

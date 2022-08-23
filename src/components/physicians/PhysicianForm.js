@@ -2,6 +2,7 @@ import { SideNavigation } from "../nav/SideNavigation"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { fetchPhysicians, postOption } from "../ApiManager"
+import "./Physicians.css"
 
 
     //function with form to POST a new Physician for the user

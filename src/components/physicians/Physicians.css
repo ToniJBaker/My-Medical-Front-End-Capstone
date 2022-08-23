@@ -1,6 +1,16 @@
 /* Card */
 #root .card{
     top:33px;
-    margin-bottom:4em
+    margin-bottom:3em
    }
+   /* Link */
+#root .card a{
+    color:#3c6e71;
+    font-weight:600;
+    text-decoration:underline;
+    text-align:center;
+    background-color:#e6cbcb;
+    font-size:18px;
+   }
+   
    

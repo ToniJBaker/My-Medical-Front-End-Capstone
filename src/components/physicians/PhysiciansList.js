@@ -1,15 +1,17 @@
 import { SideNavigation } from "../nav/SideNavigation"
 import "./Physicians.css"
 import { useState, useEffect } from "react"
-import { deleteOption, fetchPhysicians } from "../ApiManager"
+import { deleteOption, fetchAppointments, fetchPhysicians, putOption } from "../ApiManager"
 import { useNavigate } from "react-router-dom"
-
+import { Link } from "react-router-dom"
 
 
 
 export const PhysiciansList = () => {
     const [physicians, setPhysicians] = useState([])
+    
     const navigate = useNavigate()
+    
     
     
     const localMedicalUser = localStorage.getItem("myMedical_user")
@@ -19,8 +21,8 @@ export const PhysiciansList = () => {
         ()=> {
             fetchPhysicians(`?_embed=appointments`)
             .then((physiciansList) =>{
-                const physiciansForLocalUser = physiciansList.filter((physician)=> medicalUserObject.id === physician.userId )
-                setPhysicians(physiciansForLocalUser)
+                const physiciansForUser = physiciansList.filter((physician)=> medicalUserObject.id === physician.userId )
+                setPhysicians(physiciansForUser)
             })
         },
         []
@@ -29,13 +31,15 @@ export const PhysiciansList = () => {
         return <button type="button" onClick={()=>{
             fetchPhysicians(`/${physician.id}`, deleteOption()) //fetch call with DELETE option
             .then(()=>{
-                fetchPhysicians()
+                fetchPhysicians(`?_embed=appointments`)//fetch call
                     .then((userPhysicians)=> {
-                        setPhysicians(userPhysicians)
+                        const physiciansForUser = userPhysicians.filter((physician)=> medicalUserObject.id === physician.userId )
+                        setPhysicians(physiciansForUser)
                 })
             })
         }}className="btn btn-primary">Delete</button>
     }
+    
 
        
     return (
@@ -63,12 +67,12 @@ export const PhysiciansList = () => {
                                 }
                             </div>
                         </div>
-                        <div className="card-footer text-muted">
-                            
-                            {
-                                physician.appointments.map(
+                        <div className="card-footer text-muted" >
+                           {                               
+                                 physician.appointments.map(
                                     (appointment)=>
-                                    `Next Appointment: ${appointment.date}`
+                                    <Link to={`/appointments/edit/${appointment.id}`}>Next Appointment: {appointment.date} {appointment.time}</Link>
+                                    
                                 )
                             }                          
                         </div>

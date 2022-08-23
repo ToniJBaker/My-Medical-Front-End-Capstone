@@ -6,10 +6,18 @@ import { NavBar } from "./components/nav/NavBar"
 import { Authorized } from "./components/views/Authorized"
 import { ApplicationViews } from "./components/views/ApplicationViews"
 
+
+
+
 export const MyMedical =() => {
-  return (<Routes>
+  return (
+  
+  
+  <Routes>
 		  <Route path="/login" element={<Login />} />
 		  <Route path="/register" element={<Register />} />
+		  
+
 		  
 
 
@@ -18,11 +26,14 @@ export const MyMedical =() => {
         <Authorized>
             <NavBar />
             <ApplicationViews />
-            
+                  
         </Authorized>
 		} />
+    
 	</Routes>
-  );
+ 
+ 
+ );
 }
 
 

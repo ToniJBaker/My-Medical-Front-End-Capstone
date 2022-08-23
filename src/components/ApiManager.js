@@ -8,6 +8,10 @@ export const fetchPhysicians = (resource = "", options = {}) => {
   return fetch(`http://localhost:8088/physicians${resource}`, options)
   .then(response => response.json())
 }
+export const fetchAppointments = (resource = "", options = {}) => {
+  return fetch(`http://localhost:8088/appointments${resource}`, options)
+  .then(response => response.json())
+}
 
 
 

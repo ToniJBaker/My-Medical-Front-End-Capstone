@@ -162,28 +162,28 @@
       "id": 2,
       "userId": 3,
       "physicianId": 6,
-      "time": "3:00pm",
+      "time": "2:30pm",
       "date": "Mon, 6 Feb 2023"
     },
     {
       "id": 3,
       "userId": 3,
       "physicianId": 4,
-      "time": "3:00pm",
+      "time": "11:00am",
       "date": "Fri, 17 Feb 2023"
     },
     {
       "id": 4,
       "userId": 2,
       "physicianId": 7,
-      "time": "3:00pm",
+      "time": "10:00am",
       "date": "Wed, 8 Feb 2023"
     },
     {
       "id": 5,
       "userId": 2,
       "physicianId": 2,
-      "time": "3:00pm",
+      "time": "9:15am",
       "date": "Fri, 10 March 2023"
     }
   ],
