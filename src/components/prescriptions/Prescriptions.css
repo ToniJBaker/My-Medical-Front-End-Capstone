@@ -1,24 +1,13 @@
 .prescriptions{
-    width: 30%;
-    
-
-}
-.prescriptionCard {
-    width: 18rem;
+    width: 40%;
     margin-top: 2em;
-    
+   
 }
-/* Paragraph */
-.prescriptionCard .card-body p{
-    background-color:#98b6b8;
-    padding-left:15px;
-    padding-right:15px;
-    height: 3em
-   }
+
    /* Image */
 #root .prescriptionCard img{
     display:inline-block;
-    height:140px;
+    height:120px;
     opacity: 0.30;
    }
    
