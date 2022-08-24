@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { fetchAppointments, fetchPhysicians, putOption } from "../ApiManager"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import "./Appointments.css"
 
@@ -17,7 +17,7 @@ export const AppointmentUpdate = () => {
     
     useEffect(
         ()=>{
-          fetchAppointments(`/${appointmentId}`) //fetch call, appointment by id & expand to physicianId ex.http://localhost:8088/appointments/1?_expand=physician `/${appointmentId}`?_expand=physician
+          fetchAppointments(`/${appointmentId}?_expand=physician`) //fetch call, appointment by id & expand to physicianId ex.http://localhost:8088/appointments/1?_expand=physician `/${appointmentId}`?_expand=physician
           .then((appointmentFromAPI)=>{
                 setAppointment(appointmentFromAPI)
           })
@@ -27,7 +27,7 @@ export const AppointmentUpdate = () => {
     
     const handleUpdatedAppointment = (event) => { //function to save updated appointment time and date
         event.preventDefault()
-            fetchAppointments(`/${appointmentId}`, putOption(appointment)) //fetch call to POST new physician to database.json
+            fetchAppointments(`/${appointmentId}?_expand=physician`, putOption(appointment)) //fetch call to POST new physician to database.json
             .then(()=>{
                 navigate("/physicians")
             })
@@ -54,20 +54,7 @@ export const AppointmentUpdate = () => {
     return (
     <>
         <form onSubmit={handleUpdatedAppointment}>
-            {/* <div className="row mb-3" >
-                <label htmlFor="date" className="col-sm-2 col-form-label">Date</label>
-                <div className="col-sm-10">
-                <input type="text" className="form-control" value={appointment.date} id="date"/>
-                </div>
-            </div>
-  
-            <div className="row mb-3">
-                <label htmlFor="time" className="col-sm-2 col-form-label">Time</label>
-                <div className="col-sm-10">
-                <input type="text" className="form-control" value={appointment.time} id="time"/>
-                </div>
-            </div> */}
-             
+            <h5>Appointment with Dr. {appointment?.physician?.name}</h5> 
             <div className="form-group">
                 <label htmlFor="date">Choose Date:</label>
                 <input type="date"
@@ -93,6 +80,8 @@ export const AppointmentUpdate = () => {
                     } id="time"/>
             </div>
         <button type="submit" className="btn btn-primary">Update</button>
+        <Link to="/physicians" className="btn btn-primary">Back</Link>
+
     </form>
     </>
     )

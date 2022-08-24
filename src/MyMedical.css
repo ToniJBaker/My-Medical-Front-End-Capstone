@@ -6,6 +6,7 @@ body {
   margin: auto;
   min-width: 325px;
 }
+
 h2 {
   color: white;
   text-align:center;
@@ -13,8 +14,13 @@ h2 {
   background-color:#284B63;
   padding: 5px;
   margin-top: 2em;
-  
+  padding-top:29px;
+  min-height:85px;
 }
+h5 {
+  color: white;
+  background-color: #284B63;
+ }
 
 body,
 button,
@@ -27,20 +33,8 @@ textarea {
   line-height: 1.5;
   background-color:#d9d9d9;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+button:hover {
+  opacity: 0.7;
 }
 
 @keyframes App-logo-spin {
@@ -51,3 +45,16 @@ textarea {
     transform: rotate(360deg);
   }
 }
+.btn-primary:hover{
+  opacity: 0.6;
+}
+.navbar .navbar__item a{
+  color:#ffffff;
+  text-decoration:none;
+ }
+ .card-link{
+  color:white;
+  text-decoration:none;
+ }
+
+

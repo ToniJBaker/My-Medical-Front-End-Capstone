@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { fetchPhysicians, postOption } from "../ApiManager"
 import "./Physicians.css"
+import { Link } from "react-router-dom"
 
 
     //function with form to POST a new Physician for the user
@@ -85,6 +86,8 @@ import "./Physicians.css"
         </div>
         <div className="col-12">
             <button type="submit" className="btn btn-primary">Save</button>
+            <Link className="btn btn-primary" to="/physicians">Back</Link>
+
         </div>
     </form>
     

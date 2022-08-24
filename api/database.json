@@ -128,7 +128,7 @@
       "dosage": "Apply every 3-4 hours"
     },
     {
-      "id": 7,
+      "id": 6,
       "userId": 4,
       "physicianId": 5,
       "name": "Metphormin 1000mg",
@@ -140,15 +140,23 @@
       "id": 1,
       "userId": 3,
       "physicianId": 1,
-      "time": "3:00pm",
-      "date": "Mon, 15 Jan 2023"
+      "time": "09:00",
+      "date": " 01/15/2023",
+      "physician": {
+        "id": 1,
+        "userId": 3,
+        "name": "Kadin Thompson",
+        "phone": "691-565-1108 x712",
+        "address": "72253 Smitham Neck",
+        "specialty": "Orthopedics"
+      }
     },
     {
       "id": 2,
       "userId": 3,
       "physicianId": 6,
-      "time": "2:30pm",
-      "date": "Mon, 6 Feb 2023"
+      "time": "14:30",
+      "date": "02/06/2023"
     },
     {
       "id": 3,
@@ -161,15 +169,15 @@
       "id": 4,
       "userId": 2,
       "physicianId": 7,
-      "time": "10:00am",
-      "date": "Wed, 8 Feb 2023"
+      "time": "10:00",
+      "date": "02/08/2023"
     },
     {
       "id": 5,
       "userId": 2,
       "physicianId": 2,
-      "time": "9:15am",
-      "date": "Fri, 10 March 2023"
+      "time": "09:15",
+      "date": "03/10/2023"
     }
   ],
   "userMedicalHistory": [

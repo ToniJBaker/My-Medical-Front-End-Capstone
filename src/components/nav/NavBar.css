@@ -1,15 +1,6 @@
-/* Link */
-.navbar .navbar__item a{
-    color:#ffffff;
-    text-decoration:none;
-   }
    /* Button */
 #offcanvasDarkNavbar .d-flex .btn-success{
     background-color:#3c6e71;
    }
-   /* Navbar  link */
-.navbar .nav-item .navbar__link{
-    color:#ffffff;
-    text-decoration:none;
-   }
+  
    

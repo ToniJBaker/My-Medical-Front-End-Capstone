@@ -20,7 +20,7 @@ export const NavBar = () => {
                     </div>
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li className="nav-item active">
+                            <li className="navbar__item active">
                                 {/* <a class="nav-link active" aria-current="page" href="#">Home</a> */}
                                 <Link className="navbar__link" to="/">Home</Link>
                             </li>

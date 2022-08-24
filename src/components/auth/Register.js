@@ -1,9 +1,10 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { fetchUsers, postOption } from "../ApiManager.js"
 // import { fetchUsers, postOption } from "../ApiManger.js"
 import { Authorized } from "../views/Authorized"
 import "./Register.css"
+
 
 
 
@@ -133,7 +134,7 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
         </div> */}
         <div class="col-md-6">
             <label htmlFor="birthDate" className="form-label">Birth Date</label>
-            <input onChange={updateCustomer} type="text" className="form-control" id="birthDate"/>
+            <input onChange={updateCustomer} type="text" className="form-control" id="birthDate" placeholder="MM/DD/YYYY"/>
         </div>
         <div class="col-md-6">
             <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
@@ -143,6 +144,8 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
         </div>
         <div className="col-12">
             <button type="submit" className="btn btn-primary">Register</button>
+            <Link to="/login" className="btn btn-primary">Back</Link>
+
         </div>
     </form>
 </> )

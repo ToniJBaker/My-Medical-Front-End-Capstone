@@ -1,3 +1,4 @@
+import React from "react"
 import { Route, Routes } from "react-router-dom"
 import "./MyMedical.css"
 import { Login } from "./components/auth/Login"

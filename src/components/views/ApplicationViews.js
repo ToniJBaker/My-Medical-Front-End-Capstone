@@ -3,6 +3,7 @@ import { AppointmentUpdate } from "../appointments/AppointmentUpdate"
 import { SideNavigation } from "../nav/SideNavigation"
 import { PhysicianForm } from "../physicians/PhysicianForm"
 import { PhysiciansList } from "../physicians/PhysiciansList"
+import { PrescriptionForm } from "../prescriptions/PrescriptionForm"
 import { PrescriptionList } from "../prescriptions/PrescriptionList"
 import { Home } from "./Home"
 
@@ -19,6 +20,8 @@ export const ApplicationViews = () => {
             <Route path="/physicians" element={ <PhysiciansList/> }/>
             <Route path="/prescriptions" element={ <PrescriptionList/> }/>
             <Route path="/physicianForm" element={ <PhysicianForm/> }/>
+            <Route path="/prescriptionForm" element={ <PrescriptionForm/> }/>
+
             <Route path="/" element={<Home />} />
             <Route path="/appointments/edit/:appointmentId" element={< AppointmentUpdate />} />
 

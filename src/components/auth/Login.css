@@ -3,6 +3,9 @@
     position:relative;
     padding-bottom:2px;
     top: 11px;
+    padding-top:4px;
+    display:inline-block;
+    transform:translatex(0px) translatey(29px);
 
    }
 
@@ -21,8 +24,4 @@
     background-color:#d9d9d9;
     border-color:#000000;
    }
-   #root .link--register a{
-    padding-top:4px;
-    display:inline-block;
-    transform:translatex(0px) translatey(29px);
-   }
+    

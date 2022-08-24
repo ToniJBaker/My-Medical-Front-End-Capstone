@@ -1,0 +1,39 @@
+.prescriptions{
+    width: 30%;
+    
+
+}
+.prescriptionCard {
+    width: 18rem;
+    margin-top: 2em;
+    
+}
+/* Paragraph */
+.prescriptionCard .card-body p{
+    background-color:#98b6b8;
+    padding-left:15px;
+    padding-right:15px;
+    height: 3em
+   }
+   /* Image */
+#root .prescriptionCard img{
+    display:inline-block;
+    height:140px;
+    opacity: 0.30;
+   }
+   
+   /* Card body */
+   #root .prescriptionCard .card-body{
+    background-image:none;
+    background-color:#284B63;
+    border-color:#bdc3c7;
+    border-style:none !important;
+    border-top-style:solid;
+    border-top-color:#bdc3c7;
+    border-top-width:2px;
+    height: 3em;
+    padding-left: 15px
+   }
+   
+  
+   
