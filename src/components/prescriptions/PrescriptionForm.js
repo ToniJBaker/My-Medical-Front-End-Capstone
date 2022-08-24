@@ -14,7 +14,7 @@ export const PrescriptionForm = () => {
         name:"",
         dosage:""
     })
-    const [physicians, setPhysicians] = useState()
+    const [physicians, setPhysicians] = useState([])
     const navigate = useNavigate()
     
     const localMedicalUser = localStorage.getItem("myMedical_user") //allows details and use of local user
@@ -37,11 +37,12 @@ export const PrescriptionForm = () => {
         setNewPrescription(copy)
     }
     
+    
     const handleSaveNewPrescription = (event) => {  //handles the save
         event.preventDefault()
         const prescriptionToSentToAPI = {
             userId: medicalUserObject.id,
-            // physicianId: ,
+            // physicianId: physician.id,
             name: newPrescription.name,
             dosage: newPrescription.dosage
             
@@ -70,9 +71,13 @@ export const PrescriptionForm = () => {
         </div>
         <div class="col-md-4">
             <label htmlFor="physician" class="form-label">Select Physician</label>
-            <select id="physicianId" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
+            <select value="physician.id" class="form-select" onChange={savePrescription}>
+                <option value="0"> Select </option>
+                {
+                    physicians.map((physician)=>{
+                        return `<option value="${physician.id}">${physician.name}</option>`
+                    })
+                }
             </select>
         </div>
         <div className="col-12">
