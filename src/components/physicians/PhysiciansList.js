@@ -40,6 +40,12 @@ export const PhysiciansList = () => {
         }}className="btn btn-primary">Delete</button>
     }
     
+    // const displayAppointments = ()=>{
+    //     if(){
+
+    //     }
+    // }
+    
 
        
     return (
@@ -68,10 +74,13 @@ export const PhysiciansList = () => {
                             </div>
                         </div>
                         <div className="card-footer text-muted" >
+
                            {                               
                                  physician.appointments.map(
                                     (appointment)=>
+                                    
                                     <Link to={`/appointments/edit/${appointment.id}`}>Next Appointment: {appointment.date} {appointment.time}</Link>
+                                    
                                     
                                 )
                             }                          

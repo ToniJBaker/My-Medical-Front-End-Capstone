@@ -17,6 +17,9 @@ export const SideNavigation = () => {
         </div>
         <div className="offcanvas-body">
             <p className="navbar__item active">
+                <Link className="navbar__link" to="/medicalHistory">Medical History</Link>
+            </p>
+            <p className="navbar__item active">
                 <Link className="navbar__link" to="/physicians">Physicians</Link>
             </p>
             <p className="navbar__item active">

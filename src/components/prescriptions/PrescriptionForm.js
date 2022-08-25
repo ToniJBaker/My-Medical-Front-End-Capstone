@@ -15,6 +15,8 @@ export const PrescriptionForm = () => {
         dosage:""
     })
     const [physicians, setPhysicians] = useState([])
+   
+    
     const navigate = useNavigate()
     
     const localMedicalUser = localStorage.getItem("myMedical_user") //allows details and use of local user
@@ -36,25 +38,30 @@ export const PrescriptionForm = () => {
         copy[evt.target.id] = evt.target.value
         setNewPrescription(copy)
     }
+    const handleSelected = (evt)=> {
+        const copy ={...newPrescription}
+        copy[evt.target.id] = evt.target.value
+        setNewPrescription(copy)
+    }
+    
     
     
     const handleSaveNewPrescription = (event) => {  //handles the save
         event.preventDefault()
-        const prescriptionToSentToAPI = {
-            userId: medicalUserObject.id,
-            // physicianId: physician.id,
-            name: newPrescription.name,
-            dosage: newPrescription.dosage
-            
-        }
-        return (
-            fetchPrescriptions("", postOption(prescriptionToSentToAPI)) //fetch call to POST new prescription to API
+
+                const prescriptionToSentToAPI = {
+                    userId: medicalUserObject.id,
+                    // physicianId: physician.id,
+                    name: newPrescription.name,
+                    dosage: newPrescription.dosage
+            }
+             fetchPrescriptions("", postOption(prescriptionToSentToAPI)) //fetch call to POST new prescription to API
             .then(()=>{
                 navigate("/prescriptions")
-            })
-        )
+            })    
+        
     }
-    
+        
     
     return (
     <>
@@ -71,11 +78,11 @@ export const PrescriptionForm = () => {
         </div>
         <div class="col-md-4">
             <label htmlFor="physician" class="form-label">Select Physician</label>
-            <select value="physician.id" class="form-select" onChange={savePrescription}>
+            <select class="form-select" id="physicianId" onChange={handleSelected}>
                 <option value="0"> Select </option>
-                {
+                {   
                     physicians.map((physician)=>{
-                        return `<option value="${physician.id}">${physician.name}</option>`
+                        return <option  value={physician.id}>{physician.name}</option>
                     })
                 }
             </select>

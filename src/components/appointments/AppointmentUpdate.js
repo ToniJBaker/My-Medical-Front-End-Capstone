@@ -54,7 +54,7 @@ export const AppointmentUpdate = () => {
     return (
     <>
         <form onSubmit={handleUpdatedAppointment}>
-            <h5>Appointment with Dr. {appointment?.physician?.name}</h5> 
+            <h4>Appointment with Dr. {appointment?.physician?.name}</h4> 
             <div className="form-group">
                 <label htmlFor="date">Choose Date:</label>
                 <input type="date"

@@ -89,6 +89,14 @@
       "phone": "565.569.5586",
       "address": "8069 Bradtke Squares",
       "specialty": "Optometry"
+    },
+    {
+      "userId": 2,
+      "name": "Kathi Peters",
+      "phone": "719-822-3432",
+      "address": "7867 Main Street",
+      "specialty": "Cardiology",
+      "id": 8
     }
   ],
   "prescriptions": [
@@ -141,15 +149,7 @@
       "userId": 3,
       "physicianId": 1,
       "time": "09:00",
-      "date": " 01/15/2023",
-      "physician": {
-        "id": 1,
-        "userId": 3,
-        "name": "Kadin Thompson",
-        "phone": "691-565-1108 x712",
-        "address": "72253 Smitham Neck",
-        "specialty": "Orthopedics"
-      }
+      "date": " 01/15/2023"
     },
     {
       "id": 2,

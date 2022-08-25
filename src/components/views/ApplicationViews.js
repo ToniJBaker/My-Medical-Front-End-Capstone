@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import { AppointmentUpdate } from "../appointments/AppointmentUpdate"
+import { MedHistory } from "../medHistory/MedHistory"
 import { SideNavigation } from "../nav/SideNavigation"
 import { PhysicianForm } from "../physicians/PhysicianForm"
 import { PhysiciansList } from "../physicians/PhysiciansList"
@@ -17,6 +18,7 @@ export const ApplicationViews = () => {
         </Routes>
         <SideNavigation/>
         <Routes>
+            <Route path="/medicalHistory" element={ <MedHistory/> }/>
             <Route path="/physicians" element={ <PhysiciansList/> }/>
             <Route path="/prescriptions" element={ <PrescriptionList/> }/>
             <Route path="/physicianForm" element={ <PhysicianForm/> }/>

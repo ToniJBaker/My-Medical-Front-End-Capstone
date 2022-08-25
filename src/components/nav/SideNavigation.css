@@ -1,7 +1,8 @@
 /* Button */
 #root .btn-primary{
     background-color:#98b6b8;
-    color: #000000
+    color: #000000;
+    
    }
    /* Navbar  link */
 #staticBackdrop .navbar__item .navbar__link{
