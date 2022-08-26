@@ -16,6 +16,10 @@ export const fetchPrescriptions = (resource = "", options = {}) => {
   return fetch(`http://localhost:8088/prescriptions${resource}`, options)
   .then(response => response.json())
 }
+export const fetchProcedures = (resource = "", options = {}) => {
+  return fetch(`http://localhost:8088/procedures${resource}`, options)
+  .then(response => response.json())
+}
 
 
 

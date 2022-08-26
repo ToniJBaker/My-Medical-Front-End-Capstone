@@ -38,14 +38,7 @@ export const PhysiciansList = () => {
                 })
             })
         }}className="btn btn-primary">Delete</button>
-    }
-    
-    // const displayAppointments = ()=>{
-    //     if(){
-
-    //     }
-    // }
-    
+    }  
 
        
     return (

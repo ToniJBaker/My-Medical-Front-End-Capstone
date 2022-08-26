@@ -184,7 +184,84 @@
     {
       "id": 1,
       "userId": 1,
-      
+      "abnormal EKG": false,
+      "anemia": false,
+      "anginaPectoris": false,
+      "asthma": false,
+      "boneDisease": false,
+      "breastLump": false,
+      "cancer": false,
+      "coronaryArteryDisease": false,
+      "depression": false,
+      "diabetesTypeI": false,
+      "diabetesTypeII": false,
+      "emphysema": false,
+      "gallBladderDisease": false,
+      "heartAttack": false,
+      "hepatitis": false,
+      "hypertension": false,
+      "hyperthyroidism": false,
+      "hypothyroidism": false,
+      "infertility": false,
+      "kidneyDisease": false,
+      "meningitis": false,
+      "osteoporosis": false,
+      "seizures": false,
+      "seriousInjury": false,
+      "stomachUlcers": false,
+      "stroke": false,
+      "thyroidCancer": false,
+      "tuberculosis": false
+    }
+  ],
+  "procedures": [
+    {
+      "id": 1,
+      "userId": 3,
+      "name": "Spinal Stenosis",
+      "date": "09/18/1997"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "name": "Tonsillectomy",
+      "date": "09/18/1975"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "name": "Meniscus Repair",
+      "date": "04/23/1982"
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "name": "Colonoscopy",
+      "date": "01/07/2020"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "name": "Tonsillectomy",
+      "date": "02/26/2016"
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "name": "Set Ulna and Radius after break",
+      "date": "10/16/2021"
+    },
+    {
+      "id": 7,
+      "userId": 2,
+      "name": "Suspicious Mole Removal",
+      "date": "03/05/2009"
+    },
+    {
+      "userId": 3,
+      "name": "Arteriovenous Malformation Removal- Right Knee",
+      "date": "04/23/2021",
+      "id": 8
     }
   ]
 }

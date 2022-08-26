@@ -51,7 +51,7 @@ export const PrescriptionForm = () => {
 
                 const prescriptionToSentToAPI = {
                     userId: medicalUserObject.id,
-                    // physicianId: physician.id,
+                    physicianId: newPrescription.physicianId,
                     name: newPrescription.name,
                     dosage: newPrescription.dosage
             }
