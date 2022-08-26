@@ -42,20 +42,20 @@ export const MedHistory = () => {
         },[])
     
     //function to delete a procedure
-    // const deleteProcedure = (procedure)=> {
-    //     return <button type="button" onClick={()=>{
-    //         fetchProcedures(`/${procedure.id}`, deleteOption()) //fetch call with DELETE option
-    //         .then(()=>{
-    //             fetchProcedures()//fetch call
-    //                 .then((userProcedures)=> {
-    //                     const proceduresForUser = userProcedures.filter((procedure)=> medicalUserObject.id === procedure.userId ).sort((objA, objB)=> {
-    //                         return new Date(objB.date) - new Date(objA.date)
-    //                     })
-    //                     setProcedures(proceduresForUser)
-    //             })
-    //         })
-    //     }}className="deleteProcedures">Delete</button>
-    // }  
+    const deleteProcedure = (procedure)=> {
+        return <button type="button" onClick={()=>{
+            fetchProcedures(`/${procedure.id}`, deleteOption()) //fetch call with DELETE option
+            .then(()=>{
+                fetchProcedures()//fetch call
+                    .then((userProcedures)=> {
+                        const proceduresForUser = userProcedures.filter((procedure)=> medicalUserObject.id === procedure.userId ).sort((objA, objB)=> {
+                            return new Date(objB.date) - new Date(objA.date)
+                        })
+                        setProcedures(proceduresForUser)
+                })
+            })
+        }}className="deleteProcedure">Delete</button>
+    }  
     
     
     return (
@@ -96,9 +96,9 @@ export const MedHistory = () => {
                             <p className="procedure"> Procedure: {procedure.name}</p>
                             <p className="procedure">Date: {procedure.date}</p>
                             {/* <p className="procedureDelete" onClick="">Delete</p> */}
-                            {/* {
+                            {
                                 deleteProcedure(procedure)
-                            } */}
+                            }
                         </div>
                     </section>
                 )
