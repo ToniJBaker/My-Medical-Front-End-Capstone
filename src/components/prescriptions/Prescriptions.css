@@ -25,10 +25,7 @@
     padding-left: 15px
    }
 
-    Button
-#root .card-body .btn-primary{
-    transform:translatex(503px) translatey(21px);
-   }
+   
    /* Link */
 #root .card-body a{
     display:inline-block;

@@ -206,12 +206,10 @@
       "kidneyDisease": false,
       "meningitis": false,
       "osteoporosis": false,
-      "seizures": false,
-      "seriousInjury": false,
-      "stomachUlcers": false,
+      "seizures": false,     
       "stroke": false,
-      "thyroidCancer": false,
-      "tuberculosis": false
+      
+      
     }
   ],
   "procedures": [

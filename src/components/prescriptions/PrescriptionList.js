@@ -60,7 +60,7 @@ export const PrescriptionList = () => {
                             {
                             deletePrescription(prescription)
                             }
-                            <a href="#" className="card-link">Another link</a>
+                            
                         </div>
                     </div>
                 </section>

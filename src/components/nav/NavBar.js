@@ -1,9 +1,29 @@
 import './NavBar.css'
 import { Link, useNavigate } from "react-router-dom"
+import { useState, useEffect } from 'react'
 
 
 export const NavBar = () => {
     const navigate = useNavigate()
+    const [time, setTime] = useState(null)
+    
+    //useEffect to observe current time state
+    useEffect (
+        ()=>{
+            let time = getCurrentTime()
+            setTime(time)
+        },[])
+    
+    //function to get current time-military time
+    const getCurrentTime = ()=>{
+        let today = new Date()
+        let hours = (today.getHours() < 10? "0" :"") + today.getHours()
+        let minutes = (today.getMinutes()< 10? "0" :"") + today.getMinutes()
+        let seconds = (today.getSeconds()< 10? "0" :"") + today.getSeconds()
+        return hours + ":" + minutes +":" + seconds
+    }
+    
+        
     
     return (
     <>
@@ -15,7 +35,7 @@ export const NavBar = () => {
                 </button>
                 <div className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div className="offcanvas-header">
-                        <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                        <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">Current Time {time}</h5>
                         <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div className="offcanvas-body">
