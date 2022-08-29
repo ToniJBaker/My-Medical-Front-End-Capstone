@@ -44,8 +44,8 @@ export const NavBar = () => {
                                 {/* <a class="nav-link active" aria-current="page" href="#">Home</a> */}
                                 <Link className="navbar__link" to="/">Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Profile</a>
+                            <li className="navbar__item active">
+                                <Link className="navbar__link" to="/updateProfile" >Profile</Link>
                             </li>
                             {
                                 localStorage.getItem("myMedical_user")

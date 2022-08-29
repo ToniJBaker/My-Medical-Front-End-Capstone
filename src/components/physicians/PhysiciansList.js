@@ -19,7 +19,7 @@ export const PhysiciansList = () => {
     
     useEffect(
         ()=> {
-            fetchPhysicians(`?_embed=appointments`)
+            fetchPhysicians(`?_embed=appointments`) //fetch call to observe state of physicians array, with appointments embedded
             .then((physiciansList) =>{
                 const physiciansForUser = physiciansList.filter((physician)=> medicalUserObject.id === physician.userId )
                 setPhysicians(physiciansForUser)

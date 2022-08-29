@@ -5,9 +5,11 @@
       "fullName": "Cruz Rohan",
       "email": "rohan@mail.com",
       "address": "89208 Murray Circle",
-      "birthDate": "Mon Jul 18 2006 19:30:27 GMT-0400 (Eastern Daylight Time)",
-      "male": true,
-      "female": false,
+      "city": "Bellevue",
+      "state": "WA",
+      "zip": "49709",
+      "birthDate": "07/18/2006",
+      "isMale": true,
       "phoneNumber": "530.508.0916 x15155"
     },
     {
@@ -15,9 +17,11 @@
       "fullName": "Oscar Adams",
       "email": "adams@mail.com",
       "address": "3879 Sammy Lodge",
-      "birthDate": "Sat Jun 18 1985 04:35:54 GMT-0400 (Eastern Daylight Time)",
-      "male": true,
-      "female": false,
+      "city": "Green River",
+      "state": "WA",
+      "zip": "49721",
+      "birthDate": "06/18/1985",
+      "isMale": true,
       "phoneNumber": "1-704-647-9213 x5813"
     },
     {
@@ -25,19 +29,23 @@
       "fullName": "Mary Brakus",
       "email": "brakus@mail.com",
       "address": "16835 Monahan Shoal",
-      "birthDate": "Fri Apr 08 1962 22:30:03 GMT-0400 (Eastern Daylight Time)",
-      "male": false,
-      "female": true,
-      "phoneNumber": "621.409.4777 x9679"
+      "city": "Bargersville",
+      "state": "AK",
+      "zip": "80237",
+      "birthDate": "04/08/1962",
+      "isMale": "true",
+      "phoneNumber": "621.409.4777 x5676"
     },
     {
       "id": 4,
       "fullName": "Destiny Marks",
       "email": "marks@mail.com",
       "address": "0011 Hilll View",
-      "birthDate": "Mon Mar 07 1990 01:00:25 GMT-0500 (Eastern Standard Time)",
-      "male": false,
-      "female": true,
+      "city": "Pueblo",
+      "state": "CO",
+      "zip": "25689",
+      "birthDate": "03/07/1990",
+      "isMale": false,
       "phoneNumber": "794-201-2439 x719"
     }
   ],
@@ -206,10 +214,8 @@
       "kidneyDisease": false,
       "meningitis": false,
       "osteoporosis": false,
-      "seizures": false,     
-      "stroke": false,
-      
-      
+      "seizures": false,
+      "stroke": false
     }
   ],
   "procedures": [

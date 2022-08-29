@@ -7,6 +7,7 @@ import { PhysiciansList } from "../physicians/PhysiciansList"
 import { PrescriptionForm } from "../prescriptions/PrescriptionForm"
 import { PrescriptionList } from "../prescriptions/PrescriptionList"
 import { Home } from "./Home"
+import { UpdateProfile } from "./UpdateProfile"
 
 
 
@@ -18,6 +19,7 @@ export const ApplicationViews = () => {
         </Routes>
         <SideNavigation/>
         <Routes>
+            <Route path="/updateProfile" element={< UpdateProfile /> } />
             <Route path="/medicalHistory" element={ <MedHistory/> }/>
             <Route path="/physicians" element={ <PhysiciansList/> }/>
             <Route path="/prescriptions" element={ <PrescriptionList/> }/>
