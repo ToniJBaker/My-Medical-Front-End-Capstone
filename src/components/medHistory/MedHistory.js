@@ -63,12 +63,12 @@ export const MedHistory = () => {
     <>
          <h2 className="welcome">Medical History</h2>
         <SideNavigation/>
-        <button type="button" className="btn btn-primary" onClick={()=> navigate(`/medicalHistoryForm`)}>Enter Medical History</button>
+        
         <h5>Save Your Medical History</h5>
         <fieldset className="recorded-history">  
-           {
-            MedCheckBoxes()
-            }
+           
+            <MedCheckBoxes />
+            
             <hr style={{background:'black', height:'5px'}}/>
             {/* 
             <hr style={{background:'black', height:'5px'}}/>

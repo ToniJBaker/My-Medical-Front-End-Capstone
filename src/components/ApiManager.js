@@ -20,6 +20,10 @@ export const fetchProcedures = (resource = "", options = {}) => {
   return fetch(`http://localhost:8088/procedures${resource}`, options)
   .then(response => response.json())
 }
+export const fetchMedicalHistory = (resource = "", options = {}) => {
+  return fetch(`http://localhost:8088/medicalHistory${resource}`, options)
+  .then(response => response.json())
+}
 
 
 
