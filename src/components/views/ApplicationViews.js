@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import { AppointmentUpdate } from "../appointments/AppointmentUpdate"
 import { MedHistory } from "../medHistory/MedHistory"
 import { SideNavigation } from "../nav/SideNavigation"
+import { PhysicianEdit } from "../physicians/PhysicianEdit"
 import { PhysicianForm } from "../physicians/PhysicianForm"
 import { PhysiciansList } from "../physicians/PhysiciansList"
 import { PrescriptionForm } from "../prescriptions/PrescriptionForm"
@@ -24,8 +25,8 @@ export const ApplicationViews = () => {
             <Route path="/physicians" element={ <PhysiciansList/> }/>
             <Route path="/prescriptions" element={ <PrescriptionList/> }/>
             <Route path="/physicianForm" element={ <PhysicianForm/> }/>
+            <Route path="/physician/edit/:physicianId" element={ <PhysicianEdit/> }/>
             <Route path="/prescriptionForm" element={ <PrescriptionForm/> }/>
-
             <Route path="/" element={<Home />} />
             <Route path="/appointments/edit/:appointmentId" element={< AppointmentUpdate />} />
 

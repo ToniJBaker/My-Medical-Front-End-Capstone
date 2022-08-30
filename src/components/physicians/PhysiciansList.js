@@ -58,9 +58,10 @@ export const PhysiciansList = () => {
                         <div className="card-body">
                             <h5 className="card-title">Dr. {physician.name}</h5>
                             <p className="card-text">Phone: {physician.phone}</p>
-                            <p className="card-text">Address: {physician.address}</p>
+                            <p className="card-text">Street Address: {physician.address}</p>
+                            <p className="card-text">City, State Zip: {physician.city}, {physician.state} {physician.zip}</p>
                             <div className="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" className="btn btn-primary">Edit</button>
+                                <button type="button" className="btn btn-primary" onClick={()=> navigate(`/physician/edit/${physician.id}`)}>Edit</button>
                                 {
                                     deletePhysician(physician)
                                 }
@@ -76,8 +77,8 @@ export const PhysiciansList = () => {
                                     
                                     
                                 )
-                            }                          
-                        </div>
+                            }
+                         </div>
                     </div>)
         }
     </>

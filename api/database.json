@@ -33,7 +33,7 @@
       "state": "AK",
       "zip": "80237",
       "birthDate": "04/08/1962",
-      "isMale": "true",
+      "isMale": "false",
       "phoneNumber": "621.409.4777 x5676"
     },
     {
@@ -47,6 +47,18 @@
       "birthDate": "03/07/1990",
       "isMale": false,
       "phoneNumber": "794-201-2439 x719"
+    },
+    {
+      "fullName": "Jessica Klein",
+      "email": "klein45@mail.com",
+      "address": "356 Sutton Way",
+      "city": "Malibu",
+      "state": "CA",
+      "zip": "59965",
+      "birthDate": "04/23/1976",
+      "phoneNumber": "253-098-3457",
+      "isMale": "false",
+      "id": 5
     }
   ],
   "physicians": [
@@ -56,6 +68,9 @@
       "name": "Kadin Thompson",
       "phone": "691-565-1108 x712",
       "address": "72253 Smitham Neck",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "78923",
       "specialty": "Orthopedics"
     },
     {
@@ -64,6 +79,9 @@
       "name": "Janessa Conn",
       "phone": "769.416.8207",
       "address": "33274 Reinger Field",
+      "city": "Chico",
+      "state": "CA",
+      "zip": "598023",
       "specialty": "Primary Care"
     },
     {
@@ -72,6 +90,9 @@
       "name": "Hayden Emmerich",
       "phone": "565.569.5586",
       "address": "8069 Bradtke Squares",
+      "city": "Huntington",
+      "state": "WV",
+      "zip": "25705",
       "specialty": "Endocrinology"
     },
     {
@@ -80,6 +101,9 @@
       "name": "Esperanza Maggio",
       "phone": "565.569.5586",
       "address": "8069 Bradtke Squares",
+      "city": "Denver",
+      "state": "CO",
+      "zip": "67189",
       "specialty": "Primary Care"
     },
     {
@@ -88,6 +112,9 @@
       "name": "Deshaun Feeney",
       "phone": "565.569.5586",
       "address": "8069 Bradtke Squares",
+      "city": "Weed",
+      "state": "CA",
+      "zip": "58902",
       "specialty": "Primary Care"
     },
     {
@@ -96,6 +123,9 @@
       "name": "Sam Kunde",
       "phone": "565.569.5586",
       "address": "8069 Bradtke Squares",
+      "city": "Salt Lake City",
+      "state": "UT",
+      "zip": "80745",
       "specialty": "Optometry"
     },
     {
@@ -103,8 +133,19 @@
       "name": "Kathi Peters",
       "phone": "719-822-3432",
       "address": "7867 Main Street",
+      "city": "Logan",
+      "state": "UT",
+      "zip": "64378",
       "specialty": "Cardiology",
       "id": 8
+    },
+    {
+      "userId": 3,
+      "name": "Jonathan Beckley",
+      "phone": "718-094-2358",
+      "address": "6743 Martin Ln",
+      "specialty": "Oncology",
+      "id": 9
     }
   ],
   "prescriptions": [
@@ -157,7 +198,15 @@
       "userId": 3,
       "physicianId": 1,
       "time": "09:00",
-      "date": " 01/15/2023"
+      "date": "01/27/2023",
+      "physician": {
+        "id": 1,
+        "userId": 3,
+        "name": "Kadin Thompson",
+        "phone": "691-565-1108 x712",
+        "address": "72253 Smitham Neck",
+        "specialty": "Orthopedics"
+      }
     },
     {
       "id": 2,

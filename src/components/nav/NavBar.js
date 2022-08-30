@@ -1,12 +1,17 @@
 import './NavBar.css'
 import { Link, useNavigate } from "react-router-dom"
 import { useState, useEffect } from 'react'
+import { fetchUsers } from '../ApiManager'
 
 
 export const NavBar = () => {
     const navigate = useNavigate()
     const [time, setTime] = useState(null)
+    const [currentUser, setCurrentUser] = useState({})
     
+    //for getting current user
+    const localMedicalUser = localStorage.getItem("myMedical_user")
+    const medicalUserObject = JSON.parse(localMedicalUser)
     //useEffect to observe current time state
     useEffect (
         ()=>{
@@ -23,13 +28,23 @@ export const NavBar = () => {
         return hours + ":" + minutes +":" + seconds
     }
     
+    useEffect(
+        ()=> {
+            fetchUsers(`/${medicalUserObject.id}`) //fetch call get user by id
+            .then((userFromAPI)=>{
+                setCurrentUser(userFromAPI)
+            })
+        },
+    [])
+    
+    
         
     
     return (
     <>
         <nav className="navbar navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Welcome {new Date().toUTCString().slice(0,16)}</a>
+                <a className="navbar-brand" href="#">Welcome {currentUser.fullName}: {new Date().toUTCString().slice(0,16)}</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span className="navbar-toggler-icon"></span>
                 </button>

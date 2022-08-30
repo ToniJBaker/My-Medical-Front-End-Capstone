@@ -87,5 +87,24 @@ button:hover {
   color:#284B63;
   font-weight: 550;
 }
+/* Edit physician */
+.editPhysician{
+  min-width:17px;
+  width:450px;
+  height:184px;
+  background-color:#ffffff;
+  max-height:500px;
+  min-height:786px;
+  position:relative;
+ left:378px;
+ border: 2px solid darkgrey;
+ margin-bottom: 3em
+ }
+ .editPhysician-text {
+  margin-top: .5em;
+  font-weight: 600;
+  color: black
+ }
+ 
 
 

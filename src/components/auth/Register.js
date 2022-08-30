@@ -19,8 +19,7 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
         zip: "",
         birthDate: "",
         phoneNumber: "",
-        male:false ,
-        female: false
+        isMale: false
     })
     
     let navigate = useNavigate()
@@ -150,17 +149,19 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
             <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
             <input onChange={updateCustomer} type="text" className="form-control" id="phoneNumber" placeholder="ex. 801-111-2222"/>
         </div>
-        <div class="form-check">
-            <input className="form-check-input" type="radio" name="flexRadioDefault" id="male"/>
-            <label className="form-check-label" htmlFor="flexRadioDefault1">
-                Male
-            </label>
-        </div>
-        <div class="form-check">
-            <input className="form-check-input" type="radio" name="flexRadioDefault" id="female" />
-            <label className="form-check-label" htmlFor="flexRadioDefault2">
-                Female
-            </label>
+        <div onClick={updateCustomer}>
+            <div class="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="isMale" value={true}/>
+                <label className="form-check-label" htmlFor="flexRadioDefault1">
+                    Male
+                </label>
+            </div>
+            <div class="form-check">
+                <input className="form-check-input" type="radio" name="flexRadioDefault" id="isMale" value={false}/>
+                <label className="form-check-label" htmlFor="flexRadioDefault2">
+                    Female
+                </label>
+            </div>
         </div>
         <div className="col-12">
             <button type="submit" className="btn btn-primary">Register</button>
