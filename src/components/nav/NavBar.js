@@ -77,7 +77,7 @@ export const NavBar = () => {
                                     Dropdown
                                 </a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
+                                    <li><a className="dropdown-item" href="#">View Calendar</a></li>
                                     <li><a className="dropdown-item" href="#">Another action</a></li>
                                     <li>
                                         <hr className="dropdown-divider"/>

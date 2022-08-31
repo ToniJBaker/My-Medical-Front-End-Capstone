@@ -68,15 +68,15 @@ export const PhysiciansList = () => {
                             </div>
                         </div>
                         <div className="card-footer text-muted" >
-
-                           {                               
-                                 physician.appointments.map(
+                            
+                           {    
+                                physician.appointments.length                           
+                                 ?physician.appointments.map(
                                     (appointment)=>
                                     
                                     <Link to={`/appointments/edit/${appointment.id}`}>Next Appointment: {appointment.date} {appointment.time}</Link>
-                                    
-                                    
                                 )
+                                : <Link to={`/appointments/add/${physician.id}`}>Add Appointment:</Link>
                             }
                          </div>
                     </div>)

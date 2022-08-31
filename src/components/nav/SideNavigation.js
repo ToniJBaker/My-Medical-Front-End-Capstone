@@ -25,9 +25,6 @@ export const SideNavigation = () => {
             <p className="navbar__item active">
                 <Link className="navbar__link" to="/prescriptions">Prescriptions</Link>
             </p>
-            <div>
-            I will not close if you click outside of me.
-            </div>
         </div>
         </div>
     

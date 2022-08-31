@@ -57,10 +57,10 @@ export const PrescriptionList = () => {
                             <li className="list-group-item">Prescribed by: Dr.{prescription?.physician?.name}</li>
                         </ul>
                         <div className="card-body">
+                            <button type="button" className="btn btn-primary" onClick={()=> navigate(`/prescription/edit/${prescription.id}`)}>Edit</button>
                             {
                             deletePrescription(prescription)
                             }
-                            
                         </div>
                     </div>
                 </section>

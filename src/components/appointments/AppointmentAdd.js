@@ -1,50 +1,45 @@
-import { useState, useEffect } from "react"
-import { deleteOption, fetchAppointments, fetchPhysicians, putOption } from "../ApiManager"
-import { useParams, Link } from "react-router-dom"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import "./Appointments.css"
+import { fetchAppointments, fetchPhysicians, postOption,} from "../ApiManager"
+import { useParams } from "react-router-dom"
 
-export const AppointmentUpdate = () => {
-    const {appointmentId} = useParams()
+export const AppointmentAdd = () => {
     const navigate = useNavigate()
-           
+    const {physicianId} = useParams()
+    const [physician, setPhysician] = useState({})
     const [appointment, setAppointment] = useState({
         userId: 0, 
         physicianId:0,
         time:"",
         date:""
     })
-    
-    useEffect( //observe state of appointments array, expanding physicians array
+    useEffect(
         ()=>{
-          fetchAppointments(`/${appointmentId}?_expand=physician`) //fetch call, appointment by id & expand to physicianId ex.http://localhost:8088/appointments/1?_expand=physician `/${appointmentId}`?_expand=physician
-          .then((appointmentFromAPI)=>{
-                setAppointment(appointmentFromAPI)
-          })
+        fetchPhysicians(`/${physicianId}`)
+        .then((physicianFromAPI)=>{
+            setPhysician(physicianFromAPI)
+            })
         },
-        []
+    []
     )
-    //function to modify and change and existing appointment time and date
-    const handleUpdatedAppointment = (event) => { //function to save updated appointment time and date
+    
+    const localMedicalUser = localStorage.getItem("myMedical_user")
+    const medicalUserObject = JSON.parse(localMedicalUser)
+    
+    
+    const handleSaveNewAppointment = (event)=>{
         event.preventDefault()
-            fetchAppointments(`/${appointmentId}?_expand=physician`, putOption(appointment)) //fetch call to POST new physician to database.json
+        const appointmentToSendToAPI = {
+            userId:medicalUserObject.id,
+            physicianId: +physicianId,
+            time:appointment.time,
+            date:appointment.date
+        }
+        fetchAppointments("", postOption(appointmentToSendToAPI))
             .then(()=>{
                 navigate("/physicians")
-            })
-        
+        })
     }
-    
-    //function to delete appointment
-    const deleteAppointment = (appointment)=> {
-        return <button type="button" onClick={()=>{
-            fetchAppointments(`/${appointment.id}`, deleteOption()) //fetch call with DELETE option
-            .then(()=>{
-                navigate("/physicians")
-            })
-        }}className="btn btn-primary">Delete</button>
-    }  
-    
-    //function to convert date to readable string
     const convertDateFormat = (dateString, outFormat) => {
 
         if (outFormat === "slash") {
@@ -62,11 +57,13 @@ export const AppointmentUpdate = () => {
         
     }
     
+    
+        
     return (
     <>
-        <form onSubmit={handleUpdatedAppointment}>
-            <h4>Appointment with Dr. {appointment?.physician?.name}</h4> 
-            <div className="form-group">
+    <form onSubmit={(e) => handleSaveNewAppointment(e)}>
+        <h4>New Appointment with Dr. {physician.name}  </h4> 
+        <div className="form-group">
                 <label htmlFor="date">Choose Date:</label>
                 <input type="date"
                     value={convertDateFormat(appointment.date, "dash")}
@@ -78,7 +75,7 @@ export const AppointmentUpdate = () => {
                         }
                     } />
             </div>
-            <div className="form-group">
+        <div className="form-group">
                 <label htmlFor="time">Choose Time:</label>
                 <input type="time"
                     value={appointment.time}
@@ -90,13 +87,9 @@ export const AppointmentUpdate = () => {
                         }
                     } id="time"/>
             </div>
-        <button type="submit" className="btn btn-primary">Update</button>
-        <Link to="/physicians" className="btn btn-primary">Back</Link>
-        {
-            deleteAppointment(appointment)
-        }
-
+        <button type="submit" className="btn btn-primary">Save</button>
     </form>
+    
     </>
     )
 }

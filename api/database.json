@@ -235,6 +235,13 @@
       "physicianId": 2,
       "time": "09:15",
       "date": "03/10/2023"
+    },
+    {
+      "userId": 3,
+      "physicianId": 9,
+      "time": "08:30",
+      "date": "01/31/2023",
+      "id": 6
     }
   ],
   "medicalHistory": [
@@ -297,22 +304,22 @@
     {
       "id": 3,
       "userId": 3,
-      "abnormalEKG": false,
+      "abnormalEKG": true,
       "anemia": false,
-      "anginaPectoris": false,
+      "anginaPectoris": true,
       "asthma": false,
-      "boneDisease": true,
+      "boneDisease": false,
       "breastLump": false,
       "cancer": false,
-      "coronaryArteryDisease": false,
+      "coronaryArteryDisease": true,
       "depression": false,
       "diabetesTypeI": false,
       "diabetesTypeII": false,
-      "emphysema": true,
+      "emphysema": false,
       "gallBladderDisease": false,
       "heartAttack": true,
       "hepatitis": false,
-      "hypertension": false,
+      "hypertension": true,
       "hyperthyroidism": false,
       "hypothyroidism": false,
       "infertility": false,
