@@ -1,11 +1,7 @@
 import { SideNavigation } from "../nav/SideNavigation"
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams, Link } from "react-router-dom"
 import { fetchPhysicians, putOption } from "../ApiManager"
-import { useParams } from "react-router-dom"
-
-
-
 
 export const PhysicianEdit = () => {
     const navigate = useNavigate()
@@ -51,6 +47,7 @@ export const PhysicianEdit = () => {
     <>
         <h2 className="welcome">Physicians</h2>
         <SideNavigation/>
+        <Link to="/physicians" className="btn btn-primary">Back</Link>
         <form className="editPhysician" onSubmit={handlePhysicianUpdate}>
             <h4>Edit Details for: Dr. {physician.name}</h4>
             <div>

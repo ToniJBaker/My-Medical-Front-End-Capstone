@@ -17,7 +17,7 @@ export const ProcedureForm = ({localUserId, getProcedures}) => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
-    //Create "blank" task template object to set to state
+    //Create "blank" procedure template object to set to state
         const blankProcedureState = {
             userId:localUserId,
             name: newProcedure.name,
@@ -25,10 +25,7 @@ export const ProcedureForm = ({localUserId, getProcedures}) => {
         }
         fetchProcedures("",postOption(blankProcedureState))
             .then(getProcedures)
-                // .then(()=>{
-                //     navigate("/medicalHistory")
-                // })
-}
+        }
    
     return (
     <>

@@ -69,7 +69,8 @@ export const MedHistory = () => {
            
             <MedCheckBoxes />
             
-            <hr style={{background:'black', height:'5px'}}/>
+            <hr style={{background:'black', height:'5px'}}/> 
+
             {/* 
             <hr style={{background:'black', height:'5px'}}/>
             <section className="historyForm1">
