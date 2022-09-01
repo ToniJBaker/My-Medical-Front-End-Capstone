@@ -33,11 +33,15 @@ export const Home = () => {
   <div className="carousel-inner">
     <div className="carousel-item active" data-bs-interval="10000">
       <img src="https://media.istockphoto.com/photos/empty-doctors-office-picture-id1295782888?b=1&k=20&m=1295782888&s=170667a&w=0&h=KNBCRCRApn-bpmn0LVo2xbmbsq7UMlf1RPs5jT1kpYk=" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
+      {
+      appointments.length
+      ?<div className="carousel-caption d-none d-md-block">
         <h5>NEXT APPOINTMENT: {appointments[0]?.date}</h5>
         <p className="home-appointment">Time: {appointments[0]?.time}</p>
         <p className="home-appointment"> Appointment with: Dr. {appointments[0]?.physician?.name}</p>
       </div>
+      : ""
+      }
     </div>
     <div className="carousel-item" data-bs-interval="2000">
       <img src="..." className="d-block w-100" alt="..."/>

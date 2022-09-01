@@ -83,7 +83,7 @@ button:hover {
   margin-bottom: 1em
 }
 .deleteProcedure{
-  transform:translatex(1121px) translatey(-16px);
+  transform:translatex(1000px) translatey(-16px);
   color:#284B63;
   font-weight: 550;
 }
