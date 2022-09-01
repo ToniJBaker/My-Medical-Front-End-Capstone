@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
-import { fetchUsers, postOption } from "../ApiManager.js"
+import { fetchMedicalHistory, fetchUsers, postOption } from "../ApiManager.js"
 // import { fetchUsers, postOption } from "../ApiManger.js"
 import { Authorized } from "../views/Authorized"
 import "./Register.css"
@@ -9,6 +9,8 @@ import "./Register.css"
 
 
 export const Register = () => { //Need prop? Register.js in Honey Rae's was passed a prop, but seemingly never used
+    const localMedicalUser = localStorage.getItem("myMedical_user")
+    const medicalUserObject = JSON.parse(localMedicalUser)
     const [user, setUser] = useState({
         
         fullName: "",
@@ -24,7 +26,9 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
     
     let navigate = useNavigate()
 
-    const registerNewUser = () => {
+    //handle register/save new user and give blank medical history
+    const registerNewUser = (e) => {
+        e.preventDefault()
         return (
         fetchUsers("", postOption(user))//fetch call
             .then(createdUser => {
@@ -32,28 +36,43 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
                     localStorage.setItem("myMedical_user", JSON.stringify({
                         id: createdUser.id,
                     }))
-
-                    navigate("/")
+                    const emptyMedHistory = {
+                        userId: medicalUserObject.id,
+                        abnormalEKG: false,
+                        anemia: false,
+                        anginaPectoris: false,
+                        asthma: false,
+                        boneDisease: false,
+                        breastLump: false,
+                        cancer: false,
+                        coronaryArteryDisease: false,
+                        depression: false,
+                        diabetesTypeI: false,
+                        diabetesTypeII: false,
+                        emphysema: false,
+                        gallBladderDisease: false,
+                        heartAttack: false,
+                        hepatitis: false,
+                        hypertension: false,
+                        hyperthyroidism: false,
+                        hypothyroidism: false,
+                        infertility: false,
+                        kidneyDisease: false,
+                        meningitis: false,
+                        osteoporosis: false,
+                        seizures: false,
+                        stroke: false
+                    }
+                    fetchMedicalHistory("",postOption(emptyMedHistory))
+                    .then(()=>{
+                        navigate("/")
+                    })
+                    
                 }
             }))
     }
 
-    const handleRegister = (e) => {
-        e.preventDefault()
-        return ( 
-            fetchUsers(user)//fetch call
-            .then(response => {
-                if (response.length > 0) {
-                    // Duplicate email. No good.
-                    window.alert("Account with that email address already exists")
-                }
-                else {
-                    // Good email, create user.
-                    registerNewUser()
-                }
-            }))
-    }
-
+    //function to update properties of user
     const updateCustomer = (evt) => {
         const copy = {...user}
         copy[evt.target.id] = evt.target.value
@@ -61,7 +80,7 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
     }
 
     return (<>
-<form class="row g-3" onSubmit={handleRegister}>
+<form class="row g-3" onSubmit={registerNewUser}>
     <h2 className="h3 mb-3 font-weight-normal">Please Register for My Medical Storage</h2>
         
         <div class="col-md-6">

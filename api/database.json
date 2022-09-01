@@ -63,14 +63,26 @@
     {
       "fullName": "Jada Lingwood",
       "email": "lingwood@mail.com",
-      "address": "5674 Maplewood Ave.",
-      "city": "Bargersville",
-      "state": "IN",
-      "zip": "38902",
-      "birthDate": "08/03/1884",
-      "phoneNumber": "603-992-0197",
+      "address": "1212 University Ave",
+      "city": "Beaverton",
+      "state": "UT",
+      "zip": "80971",
+      "birthDate": "04/12/1984",
+      "phoneNumber": "801-235-8747",
       "isMale": "false",
       "id": 6
+    },
+    {
+      "fullName": "Sarah Smith",
+      "email": "smith@mail.com",
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "birthDate": "",
+      "phoneNumber": "",
+      "isMale": "false",
+      "id": 7
     }
   ],
   "physicians": [
@@ -158,6 +170,14 @@
       "address": "6743 Martin Ln",
       "specialty": "Oncology",
       "id": 9
+    },
+    {
+      "userId": 6,
+      "name": "John Peterson",
+      "phone": "304-235-0956",
+      "address": "346 Washington Blvd",
+      "specialty": "Gynecology",
+      "id": 10
     }
   ],
   "prescriptions": [
@@ -202,6 +222,13 @@
       "physicianId": 5,
       "name": "Metphormin 1000mg",
       "dosage": "1 tablet- once a day"
+    },
+    {
+      "userId": 6,
+      "physicianId": "10",
+      "name": "Mili-Birth Control",
+      "dosage": "1 tablet-daily",
+      "id": 7
     }
   ],
   "appointments": [
@@ -257,6 +284,13 @@
       "time": "08:30",
       "date": "01/31/2023",
       "id": 6
+    },
+    {
+      "userId": 6,
+      "physicianId": 10,
+      "time": "15:20",
+      "date": "01/11/2023",
+      "id": 7
     }
   ],
   "medicalHistory": [
@@ -324,7 +358,7 @@
       "anginaPectoris": true,
       "asthma": false,
       "boneDisease": false,
-      "breastLump": false,
+      "breastLump": true,
       "cancer": false,
       "coronaryArteryDisease": true,
       "depression": false,
@@ -343,6 +377,62 @@
       "osteoporosis": false,
       "seizures": false,
       "stroke": true
+    },
+    {
+      "userId": 6,
+      "abnormalEKG": false,
+      "anemia": false,
+      "anginaPectoris": false,
+      "asthma": false,
+      "boneDisease": false,
+      "breastLump": false,
+      "cancer": false,
+      "coronaryArteryDisease": false,
+      "depression": false,
+      "diabetesTypeI": false,
+      "diabetesTypeII": false,
+      "emphysema": false,
+      "gallBladderDisease": false,
+      "heartAttack": false,
+      "hepatitis": false,
+      "hypertension": false,
+      "hyperthyroidism": false,
+      "hypothyroidism": false,
+      "infertility": false,
+      "kidneyDisease": false,
+      "meningitis": false,
+      "osteoporosis": false,
+      "seizures": false,
+      "stroke": false,
+      "id": 4
+    },
+    {
+      "userId": 7,
+      "abnormalEKG": false,
+      "anemia": false,
+      "anginaPectoris": false,
+      "asthma": false,
+      "boneDisease": true,
+      "breastLump": true,
+      "cancer": true,
+      "coronaryArteryDisease": true,
+      "depression": false,
+      "diabetesTypeI": false,
+      "diabetesTypeII": false,
+      "emphysema": false,
+      "gallBladderDisease": false,
+      "heartAttack": false,
+      "hepatitis": false,
+      "hypertension": false,
+      "hyperthyroidism": false,
+      "hypothyroidism": false,
+      "infertility": false,
+      "kidneyDisease": false,
+      "meningitis": false,
+      "osteoporosis": false,
+      "seizures": false,
+      "stroke": false,
+      "id": 6
     }
   ],
   "procedures": [
@@ -393,6 +483,12 @@
       "name": "Arteriovenous Malformation Removal- Right Knee",
       "date": "04/23/2021",
       "id": 8
+    },
+    {
+      "userId": 6,
+      "name": "Hysterectomy",
+      "date": "03/04/2016",
+      "id": 9
     }
   ]
 }
