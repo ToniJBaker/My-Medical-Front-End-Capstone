@@ -154,7 +154,7 @@
       "userId": 3,
       "physicianId": 6,
       "name": "Albuterol Sulfate 90 mcg per actuation",
-      "dosage": "1 inhalation, morning"
+      "dosage": "1 inhalation, morning and night"
     },
     {
       "id": 2,
@@ -205,6 +205,9 @@
         "name": "Kadin Thompson",
         "phone": "691-565-1108 x712",
         "address": "72253 Smitham Neck",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "78923",
         "specialty": "Orthopedics"
       }
     },
