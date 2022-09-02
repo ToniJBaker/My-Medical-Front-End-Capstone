@@ -49,40 +49,16 @@
       "phoneNumber": "794-201-2439 x719"
     },
     {
-      "fullName": "Jessica Klein",
-      "email": "klein45@mail.com",
-      "address": "356 Sutton Way",
-      "city": "Malibu",
-      "state": "CA",
-      "zip": "59965",
-      "birthDate": "04/23/1976",
-      "phoneNumber": "253-098-3457",
-      "isMale": "false",
+      "fullName": "Bryan Foster",
+      "email": "fosterlisa@mail.com",
+      "address": "main street",
+      "city": "Renton",
+      "state": "WA",
+      "zip": "59089",
+      "birthDate": "04/23/2004",
+      "phoneNumber": "801-234-8976",
+      "isMale": "true",
       "id": 5
-    },
-    {
-      "fullName": "Jada Lingwood",
-      "email": "lingwood@mail.com",
-      "address": "1212 University Ave",
-      "city": "Beaverton",
-      "state": "UT",
-      "zip": "80971",
-      "birthDate": "04/12/1984",
-      "phoneNumber": "801-235-8747",
-      "isMale": "false",
-      "id": 6
-    },
-    {
-      "fullName": "Sarah Smith",
-      "email": "smith@mail.com",
-      "address": "",
-      "city": "",
-      "state": "",
-      "zip": "",
-      "birthDate": "",
-      "phoneNumber": "",
-      "isMale": "false",
-      "id": 7
     }
   ],
   "physicians": [
@@ -172,12 +148,20 @@
       "id": 9
     },
     {
-      "userId": 6,
-      "name": "John Peterson",
-      "phone": "304-235-0956",
-      "address": "346 Washington Blvd",
-      "specialty": "Gynecology",
+      "userId": 5,
+      "name": "Blane Burk",
+      "phone": "619-445-0938",
+      "address": "65 Stamford Park",
+      "specialty": "Cardiologist",
       "id": 10
+    },
+    {
+      "userId": 5,
+      "name": "Hailey Cope",
+      "phone": "304-093-0999",
+      "address": "65 Hill Top",
+      "specialty": "Primary Care",
+      "id": 11
     }
   ],
   "prescriptions": [
@@ -222,13 +206,6 @@
       "physicianId": 5,
       "name": "Metphormin 1000mg",
       "dosage": "1 tablet- once a day"
-    },
-    {
-      "userId": 6,
-      "physicianId": "10",
-      "name": "Mili-Birth Control",
-      "dosage": "1 tablet-daily",
-      "id": 7
     }
   ],
   "appointments": [
@@ -286,11 +263,26 @@
       "id": 6
     },
     {
-      "userId": 6,
+      "userId": 5,
       "physicianId": 10,
-      "time": "15:20",
-      "date": "01/11/2023",
-      "id": 7
+      "time": "11:30",
+      "date": "01/30/2023",
+      "id": 7,
+      "physician": {
+        "userId": 5,
+        "name": "Blane Burk",
+        "phone": "619-445-0938",
+        "address": "65 Stamford Park",
+        "specialty": "Cardiologist",
+        "id": 10
+      }
+    },
+    {
+      "userId": 5,
+      "physicianId": 11,
+      "time": "14:20",
+      "date": "02/22/2023",
+      "id": 8
     }
   ],
   "medicalHistory": [
@@ -379,7 +371,35 @@
       "stroke": true
     },
     {
-      "userId": 6,
+      "id": 4,
+      "userId": 4,
+      "abnormalEKG": false,
+      "anemia": false,
+      "anginaPectoris": false,
+      "asthma": false,
+      "boneDisease": true,
+      "breastLump": false,
+      "cancer": false,
+      "coronaryArteryDisease": false,
+      "depression": false,
+      "diabetesTypeI": false,
+      "diabetesTypeII": false,
+      "emphysema": true,
+      "gallBladderDisease": false,
+      "heartAttack": true,
+      "hepatitis": false,
+      "hypertension": false,
+      "hyperthyroidism": false,
+      "hypothyroidism": false,
+      "infertility": false,
+      "kidneyDisease": false,
+      "meningitis": false,
+      "osteoporosis": false,
+      "seizures": false,
+      "stroke": true
+    },
+    {
+      "userId": 5,
       "abnormalEKG": false,
       "anemia": false,
       "anginaPectoris": false,
@@ -387,43 +407,15 @@
       "boneDisease": false,
       "breastLump": false,
       "cancer": false,
-      "coronaryArteryDisease": false,
-      "depression": false,
-      "diabetesTypeI": false,
-      "diabetesTypeII": false,
-      "emphysema": false,
-      "gallBladderDisease": false,
-      "heartAttack": false,
-      "hepatitis": false,
-      "hypertension": false,
-      "hyperthyroidism": false,
-      "hypothyroidism": false,
-      "infertility": false,
-      "kidneyDisease": false,
-      "meningitis": false,
-      "osteoporosis": false,
-      "seizures": false,
-      "stroke": false,
-      "id": 4
-    },
-    {
-      "userId": 7,
-      "abnormalEKG": false,
-      "anemia": false,
-      "anginaPectoris": false,
-      "asthma": false,
-      "boneDisease": true,
-      "breastLump": true,
-      "cancer": true,
       "coronaryArteryDisease": true,
       "depression": false,
       "diabetesTypeI": false,
-      "diabetesTypeII": false,
+      "diabetesTypeII": true,
       "emphysema": false,
       "gallBladderDisease": false,
       "heartAttack": false,
       "hepatitis": false,
-      "hypertension": false,
+      "hypertension": true,
       "hyperthyroidism": false,
       "hypothyroidism": false,
       "infertility": false,
@@ -432,7 +424,7 @@
       "osteoporosis": false,
       "seizures": false,
       "stroke": false,
-      "id": 6
+      "id": 5
     }
   ],
   "procedures": [
@@ -485,9 +477,9 @@
       "id": 8
     },
     {
-      "userId": 6,
-      "name": "Hysterectomy",
-      "date": "03/04/2016",
+      "userId": 5,
+      "name": "Stent in Coronary Artery",
+      "date": "05/26/2019",
       "id": 9
     }
   ]

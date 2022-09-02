@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import { fetchMedicalHistory, fetchUsers, postOption } from "../ApiManager.js"
-// import { fetchUsers, postOption } from "../ApiManger.js"
 import { Authorized } from "../views/Authorized"
 import "./Register.css"
 
@@ -26,9 +25,8 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
     
     let navigate = useNavigate()
 
-    //handle register/save new user and give blank medical history
-    const registerNewUser = (e) => {
-        e.preventDefault()
+    //function register/save new user and give blank medical history
+    const registerNewUser = () => {
         return (
         fetchUsers("", postOption(user))//fetch call
             .then(createdUser => {
@@ -37,7 +35,7 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
                         id: createdUser.id,
                     }))
                     const emptyMedHistory = {
-                        userId: medicalUserObject.id,
+                        userId: createdUser.id,
                         abnormalEKG: false,
                         anemia: false,
                         anginaPectoris: false,
@@ -66,8 +64,23 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
                     fetchMedicalHistory("",postOption(emptyMedHistory))
                     .then(()=>{
                         navigate("/")
-                    })
-                    
+                    }) 
+                }}
+            ))
+    }
+
+    const handleRegister = (e) => {
+        e.preventDefault()
+        return ( 
+            fetchUsers(`?email=${user.email}`)//fetch call
+            .then(response => {
+                if (response.length > 0) {
+                    // Duplicate email. No good.
+                    window.alert("Account with that email address already exists")
+                }
+                else {
+                    // Good email, create user.
+                    registerNewUser()
                 }
             }))
     }
@@ -80,7 +93,7 @@ export const Register = () => { //Need prop? Register.js in Honey Rae's was pass
     }
 
     return (<>
-<form class="row g-3" onSubmit={registerNewUser}>
+<form class="row g-3" onSubmit={handleRegister}>
     <h2 className="h3 mb-3 font-weight-normal">Please Register for My Medical Storage</h2>
         
         <div class="col-md-6">
