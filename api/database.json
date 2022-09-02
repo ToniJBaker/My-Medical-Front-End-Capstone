@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "fullName": "Mary Brakus",
+      "fullName": "Kim Brakus",
       "email": "brakus@mail.com",
       "address": "16835 Monahan Shoal",
       "city": "Bargersville",
@@ -59,6 +59,18 @@
       "phoneNumber": "801-234-8976",
       "isMale": "true",
       "id": 5
+    },
+    {
+      "fullName": "sophi wheeler",
+      "email": "wheeler@mail.com",
+      "address": "main street",
+      "city": "Huntington",
+      "state": "WV",
+      "zip": "25705",
+      "birthDate": "04/08/1962",
+      "phoneNumber": "801-234-8976",
+      "isMale": "false",
+      "id": 6
     }
   ],
   "physicians": [
@@ -173,13 +185,6 @@
       "dosage": "1 inhalation, morning and night"
     },
     {
-      "id": 2,
-      "userId": 3,
-      "physicianId": 4,
-      "name": "Carvedilol 25mg",
-      "dosage": "1 tablet- twice a day"
-    },
-    {
       "id": 3,
       "userId": 3,
       "physicianId": 1,
@@ -206,6 +211,13 @@
       "physicianId": 5,
       "name": "Metphormin 1000mg",
       "dosage": "1 tablet- once a day"
+    },
+    {
+      "userId": 3,
+      "physicianId": "1",
+      "name": "Carvedilol 12.5mg",
+      "dosage": "1 tablet daily",
+      "id": 7
     }
   ],
   "appointments": [
@@ -256,13 +268,6 @@
       "date": "03/10/2023"
     },
     {
-      "userId": 3,
-      "physicianId": 9,
-      "time": "08:30",
-      "date": "01/31/2023",
-      "id": 6
-    },
-    {
       "userId": 5,
       "physicianId": 10,
       "time": "11:30",
@@ -283,6 +288,21 @@
       "time": "14:20",
       "date": "02/22/2023",
       "id": 8
+    },
+    {
+      "userId": 3,
+      "physicianId": 9,
+      "time": "13:45",
+      "date": "09/10/2022",
+      "id": 9,
+      "physician": {
+        "userId": 3,
+        "name": "Jonathan Beckley",
+        "phone": "718-094-2358",
+        "address": "6743 Martin Ln",
+        "specialty": "Oncology",
+        "id": 9
+      }
     }
   ],
   "medicalHistory": [
@@ -350,7 +370,7 @@
       "anginaPectoris": true,
       "asthma": false,
       "boneDisease": false,
-      "breastLump": true,
+      "breastLump": false,
       "cancer": false,
       "coronaryArteryDisease": true,
       "depression": false,
@@ -358,9 +378,9 @@
       "diabetesTypeII": false,
       "emphysema": false,
       "gallBladderDisease": false,
-      "heartAttack": true,
+      "heartAttack": false,
       "hepatitis": false,
-      "hypertension": true,
+      "hypertension": false,
       "hyperthyroidism": false,
       "hypothyroidism": false,
       "infertility": false,
@@ -425,6 +445,34 @@
       "seizures": false,
       "stroke": false,
       "id": 5
+    },
+    {
+      "userId": 6,
+      "abnormalEKG": true,
+      "anemia": false,
+      "anginaPectoris": true,
+      "asthma": false,
+      "boneDisease": false,
+      "breastLump": false,
+      "cancer": false,
+      "coronaryArteryDisease": true,
+      "depression": false,
+      "diabetesTypeI": false,
+      "diabetesTypeII": false,
+      "emphysema": false,
+      "gallBladderDisease": false,
+      "heartAttack": false,
+      "hepatitis": false,
+      "hypertension": true,
+      "hyperthyroidism": false,
+      "hypothyroidism": false,
+      "infertility": false,
+      "kidneyDisease": false,
+      "meningitis": false,
+      "osteoporosis": false,
+      "seizures": false,
+      "stroke": false,
+      "id": 6
     }
   ],
   "procedures": [
