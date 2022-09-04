@@ -21,6 +21,7 @@ export const ApplicationViews = () => {
             <Route path="/" element={<h2 className="welcome">Welcome to My Medical Storage</h2>} />
         </Routes>
         <SideNavigation/>
+        
         <Routes>
             <Route path="/updateProfile" element={< UpdateProfile /> } />
             <Route path="/medicalHistory" element={ <MedHistory/> }/>
@@ -38,6 +39,12 @@ export const ApplicationViews = () => {
 
 
         </Routes>
+        <footer>
+            <p>Author: Toni Baker</p>
+            <p><a href="https://github.com/ToniJBaker?tab=repositories">GitHub Link</a></p>
+            <p><a href="mailto:tonijbaker5@gmail.com">tonijbaker5@gmail.com</a></p><p>&copy;</p>
+
+        </footer>
     </>
     )
 }
