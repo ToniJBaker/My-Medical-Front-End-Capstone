@@ -24,6 +24,15 @@ export const fetchMedicalHistory = (resource = "", options = {}) => {
   return fetch(`http://localhost:8088/medicalHistory${resource}`, options)
   .then(response => response.json())
 }
+export const fetchImmunizations = (resource = "", options = {}) => {
+  return fetch(`http://localhost:8088/immunizations${resource}`, options)
+  .then(response => response.json())
+}
+export const fetchUserImmunizations = (resource = "", options = {}) => {
+  return fetch(`http://localhost:8088/userImmunizations${resource}`, options)
+  .then(response => response.json())
+}
+
 
 
 

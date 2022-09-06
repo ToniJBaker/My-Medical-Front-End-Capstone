@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { fetchProcedures, deleteOption } from "../ApiManager"
 import { ProcedureForm } from "./ProcedureForm"
 import { MedCheckBoxes } from "./MedCheckBoxes"
+import { Immunizations } from "./Immunizations"
 
 
 
@@ -70,27 +71,9 @@ export const MedHistory = () => {
             <MedCheckBoxes />
             
             <hr style={{background:'black', height:'5px'}}/> 
-
-            {/* 
-            <hr style={{background:'black', height:'5px'}}/>
-            <section className="historyForm1">
-                <div className="historyList">
-                    <p>  something 1  </p>
-                    <p>  something 2   </p>
-                    <p>  something 3   </p>
-                </div>
-                <div className="historyList">
-                    <p>  something 1  </p>
-                    <p>  something 2   </p>
-                    <p>  something 3   </p>
-                </div> 
-                <div className="historyList">
-                    <p>  something 1  </p>
-                    <p>  something 2   </p>
-                    <p>  something 3   </p>
-                </div>
-                
-            </section> */}
+            <h5>My Immunizations</h5>
+            <Immunizations/>
+            <hr></hr>
             <h5>My Medical Procedures</h5>
             {
                 procedures.map((procedure)=>

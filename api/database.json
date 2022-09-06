@@ -524,5 +524,237 @@
       "date": "05/26/2019",
       "id": 9
     }
+  ],
+  "immunizations": [
+    {
+      "id": 1,
+      "name": "DTaP (Diptheria, Tetanus, acellular Pertussis)"
+    },
+    {
+      "id": 2,
+      "name":"DTaP-POL (Diptheria, Tetanus, accellular Pertussis, Polio)"   
+    },
+    {
+      "id": 3,
+      "name":"HAV ped/adol, 2 dose sch (Hepatitis A)"    
+    },
+    {
+      "id": 4,
+      "name": "HBV ped/adol, 3 dose sch (Hepatitis B)" 
+    },
+    {
+      "id": 5,
+      "name": "Influenza"   
+    },
+    {
+      "id": 6,
+      "name": "Men-ACYW (MENVEO) (Meningococcal oligosaccharide ACYW-135)"   
+    },
+    {
+      "id": 7,
+      "name": "MMR (Measles, Mumps, Rubella)"   
+    },
+    {
+      "id": 8,
+      "name": "POL-IPV (inactivated virus)"   
+    },
+    {
+      "id": 9,
+      "name": "ROT1 (ROTARIX) (Rotavirus live, monovalent)"   
+    },
+    {
+      "id": 10,
+      "name": "Tdap (Tetanus, Diptheria, Acellular Pertussis)"  
+    },
+    {
+      "id": 11,
+      "name": "VAR (Varicella, Chickenpox)"   
+    },
+    {
+      "id": 12,
+      "name":"HPV (Gardasil)"
+    }
+  ],
+  "userImmunizations": [
+    {
+      "id":1,
+      "userId": 3,
+      "immunizationId": 1,
+      "date1":"04/12/1962",
+      "date2": "06/23/1962",
+      "date3": "09/02/1962",
+      "date4": "03/15/1963"
+    },
+    {
+      "id":2,
+      "userId": 3,
+      "immunizationId": 2,
+      "date1":"07/24/1966"
+    },
+    {
+      "id":3,
+      "userId": 3,
+      "immunizationId": 3,
+      "date1":"02/11/1964",
+      "date2": "11/12/1965"
+    },
+    {
+      "id":4,
+      "userId": 3,
+      "immunizationId": 4,
+      "date1":"04/13/1962",
+      "date2": "08/23/1962",
+      "date3": "12/20/1962"
+    },
+    {
+      "id":5,
+      "userId": 3,
+      "immunizationId": 5,
+      "date1":"04/13/1992",
+      "date2": "06/23/1993",
+      "date3": "09/02/1994",
+      "date4": "03/15/1998",
+      "date5": "06/22/2000"
+    },
+    {
+      "id":6,
+      "userId": 3,
+      "immunizationId": 6,
+      "date1":"04/12/1999"
+      
+    },
+    {
+      "id":7,
+      "userId": 3,
+      "immunizationId": 7,
+      "date1":"07/15/1963",
+      "date2": "11/12/1965"
+    },
+    {
+      "id":8,
+      "userId": 3,
+      "immunizationId": 8,
+      "date1":"04/12/1962",
+      "date2": "06/23/1962",
+      "date3": "09/02/1962",
+      "date4": "03/15/1966"
+    },
+    {
+      "id":9,
+      "userId": 3,
+      "immunizationId": 9,
+      "date1":"04/13/1962",
+      "date2": "06/23/1962",
+      "date3": "09/02/1962"
+     },
+    {
+      "id":10,
+      "userId": 3,
+      "immunizationId": 10,
+      "date1":"12/20/1973"
+    },
+    {
+      "id":11,
+      "userId": 3,
+      "immunizationId": 11,
+      "date1":"07/15/1963",
+      "date2": "11/12/1966"
+    },
+    {
+      "id":12,
+      "userId": 3,
+      "immunizationId": 12,
+      "date1":"12/20/1973",
+      "date2": "05/24/1974"
+    },
+    {
+      "id":13,
+      "userId": 2,
+      "immunizationId": 1,
+      "date1":"11/12/1985",
+      "date2": "12/14/1985",
+      "date3": "01/22/1986",
+      "date4":"05/16/1986" 
+    },
+    {
+      "id":14,
+      "userId": 2,
+      "immunizationId": 2,
+      "date1":"04/08/1989"
+    },
+    {
+      "id":15,
+      "userId": 2,
+      "immunizationId": 3,
+      "date1":"07/18/1986",
+      "date2": "03/23/1987"
+    },
+    {
+      "id":16,
+      "userId": 2,
+      "immunizationId": 4,
+      "date1":"11/12/1985",
+      "date2": "03/23/1986",
+      "date3": "05/11/1986"
+    },
+    {
+      "id":17,
+      "userId": 2,
+      "immunizationId": 5,
+      "date1":"11/12/1985",
+      "date2": "03/23/1986",
+      "date3": "06/12/1986",
+      "date4": "09/25/1986"
+    },
+    {
+      "id":18,
+      "userId": 2,
+      "immunizationId": 6,
+      "date1":"05/18/1997"
+    },
+    {
+      "id":19,
+      "userId": 2,
+      "immunizationId": 7,
+      "date1":"12/13/1986",
+      "date2": "05/22/1990"
+    },
+    {
+      "id":20,
+      "userId": 2,
+      "immunizationId": 8,
+      "date1":"11/12/1985",
+      "date2": "03/23/1986",
+      "date3": "05/11/1986",
+      "date4": "09/25/1986"
+    },
+    {
+      "id":21,
+      "userId": 2,
+      "immunizationId": 9,
+      "date1":"11/12/1985",
+      "date2": "03/23/1986",
+      "date3": "05/11/1986"
+    },
+    {
+      "id":22,
+      "userId": 2,
+      "immunizationId": 10,
+      "date1":"01/19/1997"
+    },
+    {
+      "id":23,
+      "userId": 2,
+      "immunizationId": 11,
+      "date1":"07/18/1986",
+      "date2": "05/22/1990"
+    },
+    {
+      "id":24,
+      "userId": 2,
+      "immunizationId": 12,
+      "date1":"05/18/1997",
+      "date2": "03/13/1998"
+    }
   ]
 }
