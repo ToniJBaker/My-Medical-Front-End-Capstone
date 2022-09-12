@@ -72,6 +72,7 @@ export const MedHistory = () => {
             
             <hr style={{background:'black', height:'5px'}}/> 
             <h5>My Immunizations</h5>
+            <button type="button" className="btn btn-primary" onClick={()=> navigate(`/immunizationForm`)}>Add Immunization</button> 
             <Immunizations/>
             <hr></hr>
             <h5>My Medical Procedures</h5>
