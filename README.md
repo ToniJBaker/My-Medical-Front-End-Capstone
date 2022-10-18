@@ -1,10 +1,18 @@
-# Getting Started with Create React App
+Front-end web application for a user/caregiver to digitally store personal medical information including: medical history, private physicians, prescriptions, medical appointments, etc.  A user will have the full capability to add, edit or delete information as needed, CRUD application. Built with React.js and json-server as a mock API. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+Two-Week Solo Project.
+![Screenshot (40)](https://user-images.githubusercontent.com/106984214/196309212-14c8054c-cfe3-456d-948d-6854d6e953ac.png)
+![Screenshot (29)](https://user-images.githubusercontent.com/106984214/196309227-8f28b6d6-e784-4334-9b44-a021525a7005.png)
+![Screenshot (30)](https://user-images.githubusercontent.com/106984214/196309236-64a880f5-73ed-43c3-b6a9-fb08d3e24490.png)
+![Screenshot (31)](https://user-images.githubusercontent.com/106984214/196309247-37c1ff10-ed4e-4ae0-b72e-f6172bb3b1fc.png)
+![Screenshot (32)](https://user-images.githubusercontent.com/106984214/196309254-4c6a5992-028e-4a6d-9763-8154a4dfc90f.png)
+![Screenshot (33)](https://user-images.githubusercontent.com/106984214/196309262-a7236cd8-0962-4c29-8af0-beccb328235a.png)
+![Screenshot (34)](https://user-images.githubusercontent.com/106984214/196309271-521be968-6f2f-48cc-9c89-fb5c5473703c.png)
+![Screenshot (35)](https://user-images.githubusercontent.com/106984214/196309281-ec3e530b-101d-4fc2-bc37-a417c7603ad8.png)
+![Screenshot (36)](https://user-images.githubusercontent.com/106984214/196309299-5df1748f-52ea-49a0-8dcd-383ae6dd112e.png)
+![Screenshot (37)](https://user-images.githubusercontent.com/106984214/196309309-c931d9f0-2af6-406a-b59d-bead227bb0f4.png)
+![Screenshot (38)](https://user-images.githubusercontent.com/106984214/196309316-c803a1d8-4936-4351-a122-8d4737b224d7.png)
+![Screenshot (39)](https://user-images.githubusercontent.com/106984214/196309332-e9766587-5e13-4830-a3d1-95039a25d444.png)
 
 ### `npm start`
 
@@ -14,57 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `json-server -p 8088 database.json`
+Runs the database.json file.
+Open [http://localhost:8088](http://localhost:8088) to view database files
